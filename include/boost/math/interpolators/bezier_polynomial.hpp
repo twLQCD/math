@@ -5,6 +5,9 @@
 // or copy at http://www.boost.org/LICENSE_1_0.txt)
 #ifndef BOOST_MATH_INTERPOLATORS_BEZIER_POLYNOMIAL_HPP
 #define BOOST_MATH_INTERPOLATORS_BEZIER_POLYNOMIAL_HPP
+#ifdef BOOST_MATH_NO_THREAD_LOCAL_WITH_NON_TRIVIAL_TYPES
+#error "This compiler does not support thread local variables, and hence the Bezier polynomial interpolator cannot be used."
+#endif
 #include <memory>
 #include <boost/math/interpolators/detail/bezier_polynomial_detail.hpp>
 
